@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="biologically inspired analog neural net that learns to play the falling icicle game"
+    />
+    <title>NeuronPool - Icicle Dodge</title>
+    <link rel="stylesheet" href="init.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="App">
+      <div class="MainContainer HStack">
+        <!-- Parameters Section -->
+        <section class="ParametersSection">
+          <div class="SectionHeader">Parameters</div>
+          <div class="SectionContent">
+            <!-- Gameplay Parameters -->
+            <div class="Subsection">
+              <h2 class="SubsectionHeader">Gameplay Parameters</h2>
+              <form class="ParametersForm VStack">
+                <div class="FormItem">
+                  <label for="playfieldWidth">Playfield Width</label>
+                  <input
+                    type="number"
+                    id="playfieldWidth"
+                    value="9"
+                    placeholder="Width of the playfield grid..."
+                  />
+                </div>
+                <div class="FormItem">
+                  <label for="playfieldHeight">Playfield Height</label>
+                  <input
+                    type="number"
+                    id="playfieldHeight"
+                    value="11"
+                    placeholder="Height of the playfield grid..."
+                  />
+                </div>
+                <div class="FormItem">
+                  <label for="maxNumIcicles">Max Number of Icicles</label>
+                  <input
+                    type="number"
+                    id="maxNumIcicles"
+                    value="5"
+                    placeholder="Max number of icicles..."
+                  />
+                </div>
+                <div class="FormItem">
+                  <label for="maxIcicleFallSpeed">Max Icicle Fall Speed</label>
+                  <input
+                    type="number"
+                    id="maxIcicleFallSpeed"
+                    value="10"
+                    placeholder="Max fall speed of icicles..."
+                  />
+                </div>
+                <div class="FormItem">
+                  <label for="maxIcicleStartingOffset"
+                    >Max Icicle Starting Offset</label
+                  >
+                  <input
+                    type="number"
+                    id="maxIcicleStartingOffset"
+                    value="3"
+                    placeholder="Max starting offset of icicles..."
+                  />
+                </div>
+              </form>
+            </div>
+
+            <!-- Neural Network Parameters -->
+            <div class="Subsection">
+              <h2 class="SubsectionHeader">Neural Network Parameters</h2>
+              <form class="ParametersForm VStack">
+                <div class="FormItem">
+                  <label for="numSensorRows">Number of Sensor Rows</label>
+                  <input
+                    type="number"
+                    id="numSensorRows"
+                    value="3"
+                    placeholder="AI visible rows ahead..."
+                  />
+                </div>
+                <div class="FormItem">
+                  <label for="numNodes">Number of Nodes</label>
+                  <input
+                    type="number"
+                    id="numNodes"
+                    value="50"
+                    placeholder="Additional nodes in the network..."
+                  />
+                </div>
+                <div class="FormItem">
+                  <label for="numStartingArrowsExcitatory"
+                    >Starting Excitatory Arrows</label
+                  >
+                  <input
+                    type="number"
+                    id="numStartingArrowsExcitatory"
+                    value="10"
+                    placeholder="Starting excitatory arrows..."
+                  />
+                </div>
+                <div class="FormItem">
+                  <label for="numStartingArrowsInhibitory"
+                    >Starting Inhibitory Arrows</label
+                  >
+                  <input
+                    type="number"
+                    id="numStartingArrowsInhibitory"
+                    value="5"
+                    placeholder="Starting inhibitory arrows..."
+                  />
+                </div>
+                <div class="FormItem">
+                  <label for="maxArrows">Max Arrows</label>
+                  <input
+                    type="number"
+                    id="maxArrows"
+                    value="100"
+                    placeholder="Maximum arrows limit..."
+                  />
+                </div>
+              </form>
+            </div>
+
+            <!-- Reinforcement Parameters -->
+            <div class="Subsection">
+              <h2 class="SubsectionHeader">Reinforcement Parameters</h2>
+              <form class="ParametersForm VStack">
+                <div class="FormItem">
+                  <label for="reinforcementFactorComputationFrames"
+                    >Reinforcement Factor Computation Frames</label
+                  >
+                  <input
+                    type="number"
+                    id="reinforcementFactorComputationFrames"
+                    value="20"
+                    placeholder="Frames used to compute reinforcement..."
+                  />
+                </div>
+                <div class="FormItem">
+                  <label for="arrowDeathCutoff">Arrow Death Cutoff</label>
+                  <input
+                    type="number"
+                    id="arrowDeathCutoff"
+                    value="0.1"
+                    placeholder="Arrow strength cutoff for death..."
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Neural Network Visualizer Section -->
+        <section class="VisualizerSection">
+          <div class="SectionHeader">Neural Network Visualizer</div>
+          <div class="SectionContent">Content for Visualizer</div>
+        </section>
+
+        <!-- Gameplay Visualization Section -->
+        <section class="GameplaySection">
+          <div class="SectionHeader">Gameplay Visualization</div>
+          <div class="SectionContent">Content for Gameplay Visualization</div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

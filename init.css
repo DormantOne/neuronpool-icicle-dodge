@@ -1,0 +1,16 @@
+/* Generic reset for all elements and pseudo-elements */
+*,
+*::before,
+*::after {
+    /* Add custom properties here */
+    box-sizing: border-box; /* This is often a useful default */
+}
+
+/* Body specific styles */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
