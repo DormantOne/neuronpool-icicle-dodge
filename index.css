@@ -49,14 +49,36 @@ pre code {
 
 /* Header for each section */
 .SectionHeader {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.5em;
     position: sticky;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.SectionHeaderRowText {
+    background-color: #333;
+    color: white;
+    padding: 4px;
+    margin: 0;
+    text-align: center;
+    font-size: 1.5em;
+    width: 100%;
+}
+
+.SectionHeaderRowButton {
+    background-color: #333;
+    padding: 4px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.StartSimulationButton {
+    font-size: 1.5em;
 }
 
 /* Content inside each section */
